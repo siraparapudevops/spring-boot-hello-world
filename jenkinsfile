@@ -1,14 +1,14 @@
 pipeline{
     agent any
     stages{
-        stage(checkout){
+        stage('checkout'){
             steps{
                 sh"""
                 git clone 'https://github.com/siraparapudevops/spring-boot-hello-world.git'
                 """
             }
         }
-        stage(maven build){
+        stage('maven build'){
             steps{
                 sh"""
                 mvn install

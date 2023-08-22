@@ -8,7 +8,7 @@ pipeline{
                 """
             }
         }
-        stage(maven buid){
+        stage(maven build){
             steps{
                 sh"""
                 mvn install

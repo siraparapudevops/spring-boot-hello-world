@@ -16,6 +16,13 @@ pipeline{
                  sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
+        stage("runing Unit Tests"){
+            steps {
+              script {
+               sh "mvn test"
+             }
+            }
+        }
     }
     post{
      always{

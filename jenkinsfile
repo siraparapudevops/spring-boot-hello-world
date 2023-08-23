@@ -26,7 +26,7 @@ pipeline{
         stage("Code Analysis"){
          environment {
           def sonarHome = tool name: 'sonarscanner-4.7'
-           steps {  
+            steps {  
              withSonarQubeEnv('mysonarserver') {
               sh "${sonarHome}/bin/sonar-scanner -Dproject.settings=./myjavaapp.properties" 
             }
